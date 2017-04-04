@@ -1,0 +1,140 @@
+#!/bin/bash
+
+APP_NAME=tsdr
+
+MYSQL_USER=user
+MYSQL_PASSWORD=HelloWorld1!
+MYSQL_DATABASE=tsdr_mobile
+MYSQL_VOLUME_CAPACITY=5Gi
+
+SOURCE_REPOSITORY_URL=http://10.64.165.99:9090/openshift/tsdr-new.git
+SOURCE_REPOSITORY_REF=master
+JENKINSFILE_FILEPATH=Jenkinsfile
+
+ENV_CICD="cicd"
+ENV_INT="${APP_NAME}-int"
+ENV_UAT="${APP_NAME}-uat"
+ENV_PROD="${APP_NAME}-prod"
+
+RUNTIME_EPHEMERAL_TEMPLATE=uspto-nodejs-runtime-ephemeral
+RUNTIME_PERSISTENT_TEMPLATE=uspto-nodejs-runtime-persistent
+BINARY_BC_TEMPLATE=uspto-nodejs-binary-build-config
+PIPELINE_TEMPLATE=uspto-generic-pipeline
+
+INT_SCALE=2
+UAT_SCALE=2
+PROD_SCALE=4
+
+echo
+echo "---------- ${ENV_INT} ----------"
+
+echo
+echo Create OCP Project
+oc new-project ${ENV_INT}
+oc project ${ENV_INT}
+
+echo
+echo Create COP Resources
+oc process openshift/template/${RUNTIME_EPHEMERAL_TEMPLATE} \
+  APP_NAME="${APP_NAME}" \
+  MYSQL_USER="${MYSQL_USER}" \
+  MYSQL_PASSWORD="${MYSQL_PASSWORD}" \
+  MYSQL_DATABASE="${MYSQL_DATABASE}" \
+  | oc create -n ${ENV_INT} -f -
+oc process openshift/template/${BINARY_BC_TEMPLATE} \
+  APP_NAME="${APP_NAME}" \
+  | oc create -n ${ENV_INT} -f -
+
+echo
+echo Scale Application
+oc scale dc/${APP_NAME}-nodejs --replicas=${INT_SCALE} -n ${ENV_INT}
+
+echo
+echo Wait 20 seconds for DB...
+sleep 20
+
+echo
+echo Initizalize DB
+./tsdr-init-ocp-mysql-db "${MYSQL_USER}" "${MYSQL_PASSWORD}"
+
+echo
+echo "---------- ${ENV_UAT} ----------"
+
+echo
+echo Create OCP Project
+oc new-project ${ENV_UAT}
+oc project ${ENV_UAT}
+
+echo
+echo Create COP Resources
+oc process openshift/template/${RUNTIME_EPHEMERAL_TEMPLATE} \
+  APP_NAME="${APP_NAME}" \
+  MYSQL_USER="${MYSQL_USER}" \
+  MYSQL_PASSWORD="${MYSQL_PASSWORD}" \
+  MYSQL_DATABASE="${MYSQL_DATABASE}" \
+  | oc create -n ${ENV_UAT} -f -
+
+echo
+echo Scale Application
+oc scale dc/${APP_NAME}-nodejs --replicas=${UAT_SCALE} -n ${ENV_UAT}
+
+echo
+echo Wait 20 seconds for DB...
+sleep 20
+
+echo
+echo Initizalize DB
+./tsdr-init-ocp-mysql-db "${MYSQL_USER}" "${MYSQL_PASSWORD}"
+
+echo
+echo "---------- ${ENV_PROD} ----------"
+
+echo
+echo Create OCP Project
+oc new-project ${ENV_PROD}
+oc project ${ENV_PROD}
+
+echo
+echo Create COP Resources
+oc process openshift/template/${RUNTIME_PERSISTENT_TEMPLATE} \
+  APP_NAME="${APP_NAME}" \
+  MYSQL_USER="${MYSQL_USER}" \
+  MYSQL_PASSWORD="${MYSQL_PASSWORD}" \
+  MYSQL_DATABASE="${MYSQL_DATABASE}" \
+  MYSQL_VOLUME_CAPACITY="${MYSQL_VOLUME_CAPACITY}" \
+  | oc create -n ${ENV_PROD} -f -
+
+echo
+echo Scale Application
+oc scale dc/${APP_NAME}-nodejs --replicas=${PROD_SCALE} -n ${ENV_PROD}
+
+echo
+echo Wait 40 seconds for DB...
+sleep 40
+
+echo
+echo Initizalize DB
+./tsdr-init-ocp-mysql-db "${MYSQL_USER}" "${MYSQL_PASSWORD}"
+
+
+echo
+echo "---------- ${ENV_CICD} ----------"
+
+echo "Switch to Project '${ENV_CICD}'"
+oc project ${ENV_CICD}
+
+echo "Grant Edit permissions to default service account"
+echo "  ${ENV_INT}"
+oc policy add-role-to-user edit system:serviceaccount:${ENV_CICD}:default -n ${ENV_INT}
+echo "  ${ENV_UAT}"
+oc policy add-role-to-user edit system:serviceaccount:${ENV_CICD}:default -n ${ENV_UAT}
+echo "  ${ENV_PROD}"
+oc policy add-role-to-user edit system:serviceaccount:${ENV_CICD}:default -n ${ENV_PROD}
+
+echo "Create '${APP_NAME}' Build Pipeline in CICD Project '${ENV_CICD}'"
+oc process openshift/template/${PIPELINE_TEMPLATE} \
+  APP_NAME="${APP_NAME}" \
+  SOURCE_REPOSITORY_URL="${SOURCE_REPOSITORY_URL}" \
+  SOURCE_REPOSITORY_REF="${SOURCE_REPOSITORY_REF}" \
+  JENKINSFILE_FILEPATH="${JENKINSFILE_FILEPATH}" \
+  | oc create -n ${ENV_CICD} -f -

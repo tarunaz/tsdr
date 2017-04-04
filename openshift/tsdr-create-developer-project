@@ -1,0 +1,55 @@
+#!/bin/bash
+
+DEV_NAME=$1
+
+APP_NAME=tsdr
+
+MYSQL_USER=user
+MYSQL_PASSWORD=HelloWorld1!
+MYSQL_DATABASE=tsdr_mobile
+
+SOURCE_REPOSITORY_URL=http://10.64.165.99:9090/${DEV_NAME}/tsdr-new.git
+SOURCE_REPOSITORY_REF=master
+CONTEXT_DIR=tsdrService
+
+DEVELOPER_TEMPLATE=uspto-nodejs-developer
+
+ENV_DEV=${APP_NAME}-dev-${DEV_NAME}
+
+echo
+echo "---------- ${ENV_DEV} ----------"
+
+echo
+echo Create OCP Project
+oc new-project ${ENV_DEV}
+oc project ${ENV_DEV}
+
+echo
+echo Create COP Resources
+oc process openshift/template/${DEVELOPER_TEMPLATE} \
+  APP_NAME="${APP_NAME}" \
+  MYSQL_USER="${MYSQL_USER}" \
+  MYSQL_PASSWORD="${MYSQL_PASSWORD}" \
+  MYSQL_DATABASE="${MYSQL_DATABASE}" \
+  SOURCE_REPOSITORY_URL="${SOURCE_REPOSITORY_URL}" \
+  SOURCE_REPOSITORY_REF="${SOURCE_REPOSITORY_REF}" \
+  CONTEXT_DIR="${CONTEXT_DIR}" \
+  | oc create -n ${ENV_DEV} -f -
+
+echo
+echo Wait 20 seconds for DB...
+sleep 20
+
+echo
+echo Initizalize DB
+./tsdr-init-ocp-mysql-db "${MYSQL_USER}" "${MYSQL_PASSWORD}"
+
+echo
+echo '--------------------'
+WEBHOOK_URL=$(oc describe bc ${APP_NAME} | egrep "webhooks" | awk '{print $2;}' | egrep "generic")
+
+echo
+echo INSTRUCTIONS
+echo "    1. Add the following URL as a Webhook to the ${SOURCE_REPOSITORY_URL} Git project so that Jenkins will automatically kick off a new pipeline on a new commit."
+echo ''
+echo "        ${WEBHOOK_URL}"

@@ -1,0 +1,48 @@
+version: "2"
+
+services:
+  tsdr-service:
+    build: ./tsdrService/.
+    image: aeec/tsdr-service   
+    env_file:
+      - ${env_file} 
+    ports:
+      - "3001:3001"
+    links:
+      - tsdr-db
+      - tsdr-flyway-db
+    container_name: tsdr-service      
+    networks:
+      - tsdr-network
+    labels:
+      interlock.hostname: "tsdr"
+      interlock.domain:   "ucp3.aeec.solutions"  
+  tsdr-db-data:
+    image: mysql:5.7
+    command: /bin/true
+    container_name: tsdr-db-data
+    networks:
+      - tsdr-network
+  tsdr-db:
+    image: mysql:5.7
+    volumes_from:
+      - tsdr-db-data
+    ports:
+      - "3307:3306"
+    env_file:
+      - ${env_file}
+    container_name: tsdr-db      
+    networks:
+      - tsdr-network
+  tsdr-flyway-db:
+    build: ./mysql/.
+    image: aeec/tsdr-flyway-db
+    env_file:
+      - ${env_file}
+    networks:
+      - tsdr-network
+    links:
+      - tsdr-db
+    container_name: tsdr-flyway-db
+networks:
+  tsdr-network:

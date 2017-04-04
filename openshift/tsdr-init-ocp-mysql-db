@@ -1,0 +1,37 @@
+#!/bin/bash
+
+DB_USER=$1
+DB_PASSWORD=$2
+
+APP_NAME=tsdr
+DB_NAME=tsdr_mobile
+NODEJS_DC=${APP_NAME}-nodejs
+
+echo
+echo Get MySQL POD
+MYSQL_POD=$(oc get pods | egrep "${APP_NAME}-" | egrep -v "deploy" | egrep '\-mysql-.*Running' | awk '{print $1;}')
+echo ${MYSQL_POD}
+
+echo
+echo Rsync SQL Data files
+TSDR_INIT_DB_DIR=/tmp/tsdr-init/sql
+mkdir -p ${TSDR_INIT_DB_DIR}
+cp ../tsdrService/db.sql ${TSDR_INIT_DB_DIR}
+cp ../mysql/sql/V1__version.sql ${TSDR_INIT_DB_DIR}
+oc rsync ${TSDR_INIT_DB_DIR} ${MYSQL_POD}:/var/lib/mysql/data
+rm -rf ${TSDR_INIT_DB_DIR}
+
+echo
+echo Init MySQL DB
+oc rsh ${MYSQL_POD} bash -c 'mysql -u root < /var/lib/mysql/data/sql/V1__version.sql'
+oc rsh ${MYSQL_POD} bash -c 'mysql -u root < /var/lib/mysql/data/sql/db.sql'
+oc rsh ${MYSQL_POD} bash -c "echo 'use ${DB_NAME}' | mysql -u root"
+
+echo
+echo Get MySQL Service IP
+MYSQL_SERVICE_IP=$(oc get service | egrep "${APP_NAME}-mysql" | awk '{ print $2;}')
+echo $MYSQL_SERVICE_IP
+
+echo
+echo Set NodeJS Environment
+oc set env dc/${NODEJS_DC} tsdr_db_host="${MYSQL_SERVICE_IP}" tsdr_db_user="${DB_USER}" tsdr_db_password="${DB_PASSWORD}" tsdr_db_database="${DB_NAME}" TSDR_LOGS_DIR='.'

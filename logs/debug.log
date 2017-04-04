@@ -1,0 +1,278 @@
+2017-03-01T04:41:56.261Z - info: Retrieving top-level statistics
+2017-03-01T04:41:56.273Z - info: Retrieving device sessions for month - 2
+2017-03-01T04:41:56.275Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T04:41:56.281Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T04:41:56.283Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T04:43:56.266Z - info: Retrieving top-level statistics
+2017-03-01T04:43:56.270Z - info: Retrieving device sessions for month - 2
+2017-03-01T04:43:56.270Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T04:43:56.271Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T04:43:56.272Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T13:13:46.308Z - info: IN root
+2017-03-01T13:13:53.909Z - info: Retrieving top-level statistics
+2017-03-01T13:13:53.911Z - info: Retrieving device sessions for month - 3
+2017-03-01T13:13:53.913Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T13:13:53.915Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T13:13:53.916Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:38:21.495Z - info: IN root
+2017-03-01T15:38:42.929Z - info: IN root
+2017-03-01T15:39:18.290Z - info: IN root
+2017-03-01T15:39:25.509Z - info: Retrieving top-level statistics
+2017-03-01T15:39:25.515Z - info: Retrieving device sessions for month - 3
+2017-03-01T15:39:25.519Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T15:39:25.524Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:39:25.526Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:49:01.802Z - info: IN root
+2017-03-01T15:49:06.505Z - info: Retrieving top-level statistics
+2017-03-01T15:49:06.508Z - info: Retrieving device sessions for month - 3
+2017-03-01T15:49:06.510Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T15:49:06.514Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.e.Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:49:06.516Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.e.Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:49:36.036Z - info: Retrieving top-level statistics
+2017-03-01T15:49:36.047Z - info: Retrieving device sessions for month - 3
+2017-03-01T15:49:36.048Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T15:49:36.052Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.e.Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:49:36.053Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.e.Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:50:11.604Z - info: Retrieving top-level statistics
+2017-03-01T15:50:11.612Z - info: Retrieving device sessions for month - 3
+2017-03-01T15:50:27.562Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T15:50:43.210Z - error:  Error: connect ETIMEDOUT
+    at PoolConnection.Connection._handleConnectTimeout (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:419:13)
+    at Socket.g (events.js:291:16)
+    at emitNone (events.js:86:13)
+    at Socket.emit (events.js:185:7)
+    at Socket._onTimeout (net.js:339:8)
+    at ontimeout (timers.js:365:14)
+    at tryOnTimeout (timers.js:237:5)
+    at Timer.listOnTimeout (timers.js:207:5)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.e.Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:50:43.220Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.e.Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:58:54.129Z - info: Retrieving top-level statistics
+2017-03-01T15:58:54.138Z - info: Retrieving device sessions for month - 3
+2017-03-01T15:58:56.119Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T15:58:57.143Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T15:58:57.145Z - error:  Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object.exports._errnoException (util.js:1026:11)
+    at exports._exceptionWithHostPort (util.js:1049:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1085:14)
+    --------------------
+    at Protocol._enqueue (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:141:48)
+    at Protocol.handshake (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/protocol/Protocol.js:52:41)
+    at PoolConnection.connect (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Connection.js:130:18)
+    at Pool.getConnection (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/mysql/lib/Pool.js:48:16)
+    at Promise.apply (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1165:26)
+    at Promise.promise.promiseDispatch (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:788:41)
+    at /Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:1391:14
+    at runSingle (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:137:13)
+    at flush (/Users/greensod/usptoWork/tsdr/code/temp/tsdr/tsdrService/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+2017-03-01T16:00:05.105Z - info: Retrieving top-level statistics
+2017-03-01T16:00:05.114Z - info: Retrieving device sessions for month - 3
+2017-03-01T16:00:05.116Z - info: Retrieving alert statistics for year - 2016
+2017-03-01T16:00:05.758Z - info: Retrieving bookmark statistics for year - 2016
