@@ -1,6 +1,6 @@
 OC_LOG_LEVEL=3
 
-node ('jdk8') {
+node ('maven') {
 
     def WORKSPACE = pwd()
    
